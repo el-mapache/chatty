@@ -1,0 +1,11 @@
+{
+  "name": "Chatty",
+  "version": "0.0.1",
+  "description": "Cloud-based netchat real time, in the background",
+  "dependencies": {
+      "socket.io": "*",
+      "express": "*",
+      "jade": "*"
+  },
+  "author": "mapache"
+}

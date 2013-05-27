@@ -1,0 +1,18 @@
+extends layout
+
+block chat
+  .container
+    .span10#join
+      label Choose a nickname
+      .form-inline
+        input(type="text", id="nickname")
+        button#submit Join!
+     .container
+       .row
+         .span6
+           #chats
+           #chat-box.form-inline
+             input.field(type="text")
+             button.send(type="submit") send
+         .span4
+           .connected

@@ -1,0 +1,65 @@
+body {
+  position: relative;
+  width: 100%;
+  background: #dfdfdf;
+  font-size: 13px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+input {
+  padding: 0px !important;
+}
+
+#join {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+#join label {
+}
+
+#chats {
+  background: #dedede;
+  min-height: 50px;
+}
+
+#chat-box {
+  padding: 20px;
+  height: 50px;
+}
+
+
+.form-input {
+  margin: 0 5px 0 5px;
+}
+
+.field {
+  padding: 8px;
+  background: #dedede;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: 4px 4px;
+  outline: none;
+  margin-right: 5px;
+}
+
+.field:focus {
+  background: #efefef;
+  outline: none; 
+}
+
+.send {
+  padding: 6px;
+  background: #99CE21;
+  border: 1px transparent;
+  border-radius: 4px 4px;
+}
+
+.send:hover {
+  cursor: pointer;
+  color: #fff;
+}

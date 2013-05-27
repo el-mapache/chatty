@@ -1,0 +1,22 @@
+!!!
+html
+  head
+    title= "Chatty"
+    link(rel="stylesheet", href="/css/bootstrap.css")
+    link(rel="stylesheet", href="/css/chatty.css")
+    script(src='/socket.io/socket.io.js')
+  body
+    div!= body
+    .container
+      .span10
+       .container
+          .span6
+            #chats
+            #chat-box.form-inline
+              input.field(type="text", class="input-large")
+              button.send(type="submit") send
+          .span4
+            .connected
+
+
+    script(src="/js/chatty.js")
