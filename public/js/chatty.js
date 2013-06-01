@@ -4,11 +4,11 @@
   var Chat = root.Chatty = {
     start: function(opts) {
       return new Chatty(opts).connect();
-    } 
+    }
   }
 
   function Chatty(opts) {
-    this.server = (opts && opts.server || "http://localhost:1337");
+    this.server = (opts && opts.server || "http://192.168.5.243:1337");
     this.socket = null;
     this.nickname = null;
     this.users = [];
@@ -24,6 +24,15 @@
       chatty.request("talk", field.value);
       field.value = "";
     };
+
+    field.onkeypress = function(e) {
+      if (event.which == 13 || event.keyCode == 13) {
+        chatty.request("talk", field.value);
+        field.value = "";
+        return false;
+      }
+      return true;
+    }
 
     join.onclick = function() {
       chatty.request("join", nick.value);
@@ -64,12 +73,12 @@
     handleJoin: function(data) {
       if(data.message) {
        if(data.users.length !== this.users.length) {
-         this.updateUsers(data.users);  
+         this.updateUsers(data.users);
        }
       }
       document.getElementById("join").remove();
     },
-    
+
     handleConnect: function(data) {
       console.log(data)
       if(data.users.length !== this.users.length) {
@@ -86,11 +95,11 @@
         li.innerHTML = this.users[i];
         ul.appendChild(li);
       }
-      
+
       document.querySelector(".connected").innerHTML = "";
       document.querySelector(".connected").appendChild(fragment.appendChild(ul));
     }
   };
-  
+
   return Chat.start();
 }(window));
